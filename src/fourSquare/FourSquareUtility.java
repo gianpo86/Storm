@@ -11,7 +11,7 @@ public class FourSquareUtility{
 
 	public String getTweetNationality(String ll) throws FoursquareApiException{
 
-		FoursquareApi foursquareApi = new FoursquareApi("");
+		FoursquareApi foursquareApi = new FoursquareApi("QDIG2SIMY43W5IHPYTHVUCMHAZD1CI5DZVRC2TID3D4WHWYV", "T0DI5TTRNTBU32Q1MAG0WWMECJQF0LJUGQM2VCQVMVUVGAV1", "http://www.4sqarestorm.it");
 
 		String nationality = "";
 		fi.foyt.foursquare.api.Result<VenuesSearchResult> result = foursquareApi.venuesSearch(ll, null, null, null, null, null, null, null, null, null, null);
@@ -26,7 +26,7 @@ public class FourSquareUtility{
 
 	public String getBestCategory(String ll) throws FoursquareApiException{
 		String category = "";
-		FoursquareApi foursquareApi = new FoursquareApi("");
+		FoursquareApi foursquareApi = new FoursquareApi("QDIG2SIMY43W5IHPYTHVUCMHAZD1CI5DZVRC2TID3D4WHWYV", "T0DI5TTRNTBU32Q1MAG0WWMECJQF0LJUGQM2VCQVMVUVGAV1", "http://www.4sqarestorm.it");
 		fi.foyt.foursquare.api.Result<VenuesSearchResult> result = foursquareApi.venuesSearch(ll, null, null, null, null, null, null, null, null, null, null);
 		if (result.getMeta().getCode() == 200) {
 			Double distanceMin = 2000000.0;
@@ -59,7 +59,7 @@ public class FourSquareUtility{
 
 		boolean isValidVenue = false;
 
-		FoursquareApi foursquareApi = new FoursquareApi("");
+		FoursquareApi foursquareApi = new FoursquareApi("QDIG2SIMY43W5IHPYTHVUCMHAZD1CI5DZVRC2TID3D4WHWYV", "T0DI5TTRNTBU32Q1MAG0WWMECJQF0LJUGQM2VCQVMVUVGAV1", "http://www.4sqarestorm.it");
 		fi.foyt.foursquare.api.Result<VenuesSearchResult> result = foursquareApi.venuesSearch(ll, null, null, null, null, null, null, null, null, null, null);
 		if (result.getMeta().getCode() == 200) {
 			for (CompactVenue venue : result.getResult().getVenues()) {
@@ -84,7 +84,7 @@ public class FourSquareUtility{
 
 		boolean isValidVenue = false;
 
-		FoursquareApi foursquareApi = new FoursquareApi("");
+		FoursquareApi foursquareApi = new FoursquareApi("QDIG2SIMY43W5IHPYTHVUCMHAZD1CI5DZVRC2TID3D4WHWYV", "T0DI5TTRNTBU32Q1MAG0WWMECJQF0LJUGQM2VCQVMVUVGAV1", "http://www.4sqarestorm.it");
 		fi.foyt.foursquare.api.Result<VenuesSearchResult> result = foursquareApi.venuesSearch(ll, null, null, null, null, null, null, null, null, null, null);
 		if (result.getMeta().getCode() == 200) {
 			for (CompactVenue venue : result.getResult().getVenues()) {
